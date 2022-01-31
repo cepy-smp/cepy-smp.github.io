@@ -10,9 +10,11 @@
   // Form Inputs
   formInputs = $(form).children("input");
   $(".result").hide();
+  $(".papiez").hide();
 
   // Valid Code
   validCode = "3529";
+  validCod = "2137";
 
   //JQuery AutoTab to automatically move forward when maximum length of input is reached.
   $(formInputs).autotab_magic();
@@ -37,7 +39,11 @@
       $(".hint").fadeOut(); // Hides the hint
       $(".result").fadeIn();
       return false; // End of successful code input
-    } else if (c.length === 4) { // Checks if code is 4 digits long
+	} else if (c === validCod) {
+      $(form).removeClass("error").addClass("success"); // Adds success class and removes error class from form
+      $(".hint").fadeOut(); // Hides the hint
+      $(".papiez").fadeIn();
+	} else if (c.length === 4) { // Checks if code is 4 digits long
       return $(".hint").fadeIn(); // Shows the hint
     } else {
       $(form).addClass("error").removeClass("success"); // Adds error class, removes success class from form
