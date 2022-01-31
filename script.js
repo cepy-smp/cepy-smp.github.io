@@ -37,11 +37,13 @@
     if (c === validCode) { // Checks code against validCode variable
       $(form).removeClass("error").addClass("success"); // Adds success class and removes error class from form
       $(".hint").fadeOut(); // Hides the hint
+      $(".papiez").fadeOut(); 
       $(".result").fadeIn();
       return false; // End of successful code input
 	} else if (c === validCod) {
       $(form).removeClass("error").addClass("success"); // Adds success class and removes error class from form
       $(".hint").fadeOut(); // Hides the hint
+      $(".result").fadeOut();
       $(".papiez").fadeIn();
 	} else if (c.length === 4) { // Checks if code is 4 digits long
       return $(".hint").fadeIn(); // Shows the hint
