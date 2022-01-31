@@ -28,6 +28,7 @@ h3 {
   color: #ccc;
   line-height: 36px;
   margin-bottom: 1em;
+  transform: scale(1.2)
 }
 
 form {
@@ -72,9 +73,11 @@ input:focus {
 ul {
   padding-top: 2em;
   clear: both;
+  transform: scale(1.3)
 }
 ul li {
   list-style-type: none;
+  transform: scale(1.3)
 }
 
 strong {
